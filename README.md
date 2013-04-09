@@ -1,7 +1,7 @@
 latexWordCount
 ==============
 
-Count the words in a .tex file. The program will ask for the name of the file, which should be given without the .tex extension (this will ONLY work with .tex files)
+Count the words in a .tex file. The program will ask for the name of the file, which should be given without the .tex extension (this will ONLY work with .tex files). Spacing in names is allowed.
 
 Windows
 ==============
