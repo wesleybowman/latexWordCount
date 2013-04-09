@@ -47,25 +47,27 @@ def keyword_filter(word):
             return True    
     return False    
 
-# Open specified file
-infileName = raw_input('Name of file: ')
-infile = os.path.abspath(infileName)
+if __name__=='__main__':
+	# Open specified file
+	infileName = raw_input('Name of file: ')
+	infileName +='.tex'
+	infile = os.path.abspath(infileName)
 
-with open(infile, 'r') as infile:
-    # Pass list of lines to text var
-    text = infile.readlines()
+	with open(infile, 'r') as infile:
+		# Pass list of lines to text var
+		text = infile.readlines()
 
 
-#list of words, includes punctuation and keywords
-text = text_breaker(text)
+	#list of words, includes punctuation and keywords
+	text = text_breaker(text)
 
-#traverse list and count up the words
-count=0
-for item in text:
-    if not keyword_filter(item):
-        count+=1
+	#traverse list and count up the words
+	count=0
+	for item in text:
+		if not keyword_filter(item):
+			count+=1
 
-#print word count
-print '\n%s words \n'%(count,)
-x=raw_input('Press any key to exit')
-sys.exit()
+	#print word count
+	print '\n%s words \n'%(count,)
+	x=raw_input('Press any key to exit')
+	sys.exit()
